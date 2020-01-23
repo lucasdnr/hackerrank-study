@@ -46,32 +46,3 @@ fwrite($fptr, $result . "\n");
 
 fclose($stdin);
 fclose($fptr);
-
-
-// 25 10
-
-// 1 29 94 15 87 100 20 55 100 45 82 80 100 100 3 53 100 2 100 100 100 100 100 100 1
-
-//11
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int main() {
-    int n, k;
-    scanf("%d%d", &n, &k);
-    int answer = 0;
-    int page = 1;
-    for(int chapter = 1; chapter <= n; ++chapter) {
-        int problems;
-        scanf("%d", &problems);
-        for(int index = 1; index <= problems; ++index) {
-            if(index == page)
-                answer++;
-            if(index == problems || index % k == 0)
-                ++page;
-        }
-    }
-    printf("%d\n", answer);
-    return 0;
-}
