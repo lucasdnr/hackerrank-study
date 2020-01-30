@@ -9,6 +9,7 @@ function countSort($fp, $n)
     $arrSort        = array();
     $count          = 0;
 
+    //prepare input
     while ($arr = trim(fgets($fp))) {
         $count++;
         list($a, $t) = explode(' ', $arr);
@@ -36,6 +37,7 @@ function countSort($fp, $n)
     $c      = count($resultSort);
     $j      = 0;
 
+    //loop in array and takes corresponding register
     for ($i = 0; $i < $c; $i++) {
         for ($j = 0; $j < $resultSort[$i]; $j++) {
             if (isset($arrTemp[$i][$j]))
