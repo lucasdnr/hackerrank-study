@@ -14,8 +14,8 @@ process.stdin.on('end', _ => {
     inputString = inputString.trim().split('\n').map(string => {
         return string.trim();
     });
-    
-    main();    
+
+    main();
 });
 
 function readLine() {
@@ -29,16 +29,23 @@ function readLine() {
  * If 'a' is negative, throw an Error with the message "Negative Error"
  */
 function isPositive(a) {
+
+    if (a == 0)
+        throw Error('Zero Error');
+    else if (a < 0)
+        throw Error('Negative Error');
     
+    return 'YES';
+
 }
 
 
 function main() {
     const n = +(readLine());
-    
+
     for (let i = 0; i < n; i++) {
         const a = +(readLine());
-      
+
         try {
             console.log(isPositive(a));
         } catch (e) {
