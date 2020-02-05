@@ -1,0 +1,13 @@
+#wrapper-buttons {
+  width: 75%;
+}
+button {
+  width: 30%;
+  height: 48px;
+  margin: 2px;
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid #8c8c8c;
+  background: rgb(173, 173, 173);
+  background: linear-gradient(180deg, rgba(173, 173, 173, 1) 0%, rgba(204, 204, 204, 1) 100%);
+}
